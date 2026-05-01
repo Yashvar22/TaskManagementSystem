@@ -1,14 +1,14 @@
 [build]
 builder = "NIXPACKS"
 
-[build.nixpacksPlan.phases.setup]
-  nixPkgs = ["nodejs", "npm"]
+[build]
+builder = "NIXPACKS"
 
 [build.nixpacksPlan.phases.install]
-  cmds = ["npm install"]
+  cmds = ["npm install", "cd frontend && npm install", "cd backend && npm install"]
 
 [build.nixpacksPlan.phases.build]
-  cmds = ["cd frontend && npm install && npm run build", "cd backend && npm install"]
+  cmds = ["npm run build"]
 
 [deploy]
   startCommand = "cd backend && npm start"
