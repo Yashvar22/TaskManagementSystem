@@ -1,9 +1,6 @@
 [build]
 builder = "NIXPACKS"
 
-[build]
-builder = "NIXPACKS"
-
 [build.nixpacksPlan.phases.install]
   cmds = ["npm install", "cd frontend && npm install", "cd backend && npm install"]
 
